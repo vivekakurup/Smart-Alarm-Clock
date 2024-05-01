@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome To Your Sleep Dashboard!</title>
+    <style>
+        /* CSS styles for the body */
+        body {
+            font-family: Arial, sans-serif; /* Set font family */
+            background-color: #4B0082; /* Set background color to blue */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+        }
+        /* CSS styles for the container */
+        .container {
+            max-width: 800px; /* Set maximum width */
+            margin: 100px auto; /* Center the container */
+            padding: 50px; /* Add padding */
+            background-color:#f5e6fd; /* Set background color */
+            border-radius: 20px; /* Add border radius */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add box shadow */
+            position: relative; /* Make the container relative for absolute positioning */
+        }
+        /* CSS styles for the heading */
+        h1 {
+            text-align: center; /* Center align the text */
+            margin-top: -20px; /* Adjust top margin */
+            color: #4B0082; /* Set heading color to match background */
+        }
+        /* CSS styles for the unordered list */
+        ul {
+            list-style-type: none; /* Remove default list style */
+            padding: 0; /* Remove padding */
+            text-align: center; /* Center align the text */
+        }
+        /* CSS styles for the list items */
+        li {
+            margin-bottom: 30px; /* Add bottom margin */
+            display: inline-block; /* Display as inline-block for horizontal alignment */
+            margin-right: 20px; /* Add right margin */
+        }
+        /* CSS styles for the links */
+        a {
+            text-decoration: none; /* Remove underline from links */
+            color: #fff; /* Set text color to white */
+            font-weight: bold; /* Set font weight to bold */
+            padding: 10px 20px; /* Add padding */
+            display: inline-block; /* Display as inline-block */
+            border-radius: 5px; /* Add border radius */
+            background-color: #4B0082; /* Set background color to blue */
+            transition: background-color 0.3s; /* Add transition for background color */
+        }
+        /* CSS styles for the links on hover */
+        a:hover {
+            background-color: #663399; /* Change background color on hover */
+        }
+        /* CSS styles for the set alarm button */
+        .set-alarm-button {
+            text-align: center; /* Center align the text */
+            margin-top: 20px; /* Add top margin */
+        }
+        /* CSS styles for the set alarm button link */
+        .set-alarm-button a {
+            color: #4B0082; /* Set text color to match background */
+            background-color: #fff; /* Set background color to white */
+            padding: 15px 30px; /* Add padding */
+            border-radius: 50px; /* Add border radius */
+            display: inline-block; /* Display as inline-block */
+            font-weight: bold; /* Set font weight to bold */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s, color 0.3s; /* Add transition for background color and text color */
+        }
+        /* CSS styles for the set alarm button link on hover */
+        .set-alarm-button a:hover {
+            background-color: #663399; /* Change background color on hover */
+            color: #fff; /* Change text color on hover */
+        }
+        /* CSS styles for the stars */
+        .star {
+            position: absolute; /* Position the stars absolutely */
+            background-color: #e6ccff; /* Light purple color */
+            border-radius: 50%; /* Circle shape */
+            width: 10px; /* Width of the star */
+            height: 10px; /* Height of the star */
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Container for the content -->
+        <h1>Welcome To Your Sleep Dashboard</h1> <!-- Heading for the page -->
+        <ul> <!-- Unordered list for links -->
+            <li><a href="/alarm">View Alarm Data</a></li> <!-- Link to view alarm data -->
+            <li><a href="/weather">View Weather Data</a></li> <!-- Link to view weather data -->
+        </ul>
+        <div class="set-alarm-button"> <!-- Div for the set alarm button -->
+            <a href="/set_alarm">Set Alarm</a> <!-- Link to set alarm -->
+        </div>
+        <div class="canvas-container"> <!-- Container for the canvas -->
+            <canvas id="newCanvas" width="300" height="250"></canvas> <!-- Canvas tag with id, width, and height -->
+        </div>
+    </div>
+    <div class="image-container" style="display: flex; justify-content: center; margin-bottom: 20px;"> <!-- Div for the image -->
+    <img src="https://www.refinery29.com/images/10355168.jpg?format=webp&width=545&height=654&quality=85&crop=5%3A6" alt="Alarm Image"> <!-- Image tag with source and alt text -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Set Alarm</title>
+    <style>
+        /* CSS styles for the body */
+        body {
+            font-family: Arial, sans-serif; /* Set font family */
+            background-color: #4B0082; /* Set background color */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+        }
+        /* CSS styles for the container */
+        .container {
+            max-width: 800px; /* Set maximum width */
+            margin: 100px auto; /* Center the container */
+            padding: 20px; /* Add padding */
+            background-color: #f5e6fd; /* Set background color */
+            border-radius: 10px; /* Add border radius */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+            text-align: center; /* Center align text */
+        }
+        /* CSS styles for the heading */
+        h1 {
+            margin-top: 0; /* Remove top margin */
+        }
+        /* CSS styles for the form */
+        form {
+            margin-top: 20px; /* Add top margin */
+        }
+        /* CSS styles for labels */
+        label {
+            display: block; /* Display as block */
+            margin-bottom: 10px; /* Add bottom margin */
+        }
+        /* CSS styles for input elements and button */
+        input[type="time"],
+        input[type="text"],
+        button {
+            padding: 10px; /* Add padding */
+            margin-bottom: 10px; /* Add bottom margin */
+        }
+        /* CSS styles for the button */
+        button {
+            background-color: #f0f0f0; /* Set background color */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Add border radius */
+            cursor: pointer; /* Change cursor to pointer */
+            transition: background-color 0.3s; /* Add transition effect for background color */
+        }
+        /* CSS styles for the button on hover */
+        button:hover {
+            background-color: #e0e0e0; /* Change background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Container for the form -->
+        <h1>Set Alarm</h1> <!-- Heading for the form -->
+        <form method="POST" action="/set_alarm"> <!-- Form for setting the alarm -->
+            <label for="alarm_time">Alarm Time:</label> <!-- Label for alarm time input -->
+            <input type="time" id="alarm_time" name="alarm_time" required> <!-- Input field for alarm time -->
+
+            <label for="alarm_date">Alarm Date:</label> <!-- Label for alarm date input -->
+            <input type="date" id="alarm_date" name="alarm_date" required> <!-- Input field for alarm date -->
+
+            <label for="repeat_days">Repeat Days (e.g., Mon, Tue, Wed):</label> <!-- Label for repeat days input -->
+            <input type="text" id="repeat_days" name="repeat_days" pattern="^[A-Za-z]{3}(,[A-Za-z]{3}){0,6}$" placeholder="e.g., Mon,Tue,Wed"> <!-- Input field for repeat days -->
+
+            <button type="submit">Set Alarm</button> <!-- Submit button for setting the alarm -->
+        </form>
+    </div>
+</body>
+</html>
+

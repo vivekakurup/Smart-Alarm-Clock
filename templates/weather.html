@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Data</title>
+    <style>
+        /* CSS styles for the body */
+        body {
+            font-family: Arial, sans-serif; /* Set font family */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+            background-color: #4B0082; /* Set background color to purple */
+            color: #4B0082; /* Set text color to white */
+        }
+        /* CSS styles for the container */
+        .container {
+            max-width: 800px; /* Set maximum width */
+            margin: 50px auto; /* Center the container with some top margin */
+            padding: 20px; /* Add padding */
+            background-color: #f5e6fd; /* Set background color to light purple */
+            border-radius: 5px; /* Add border radius */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+        }
+        /* CSS styles for the heading */
+        h1 {
+            text-align: center; /* Center align the text */
+        }
+        /* CSS styles for the paragraphs */
+        p {
+            margin-bottom: 10px; /* Add bottom margin to separate paragraphs */
+        }
+        /* CSS styles for the table */
+        table {
+            width: 100%; /* Set table width to 100% */
+            border-collapse: collapse; /* Collapse borders */
+        }
+        th, td {
+            padding: 8px; /* Add padding */
+            text-align: left; /* Align text to the left */
+            border-bottom: 1px solid #ddd; /* Add bottom border */
+        }
+        th {
+            background-color: #f5e6fd; /* Set background color for table header */
+        }
+        tr:hover {
+            background-color: #f9f9f9; /* Change background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Container for weather data -->
+        <h1>Weather Data</h1> <!-- Heading for the weather data -->
+        <p>Location: {{ location }}, {{ region }}, {{ country }}</p> <!-- Display location -->
+        <p>Local Time: {{ localtime }}</p> <!-- Display local time -->
+        <p>Temperature: {{ temp_c }}°C ({{ temp_f }}°F)</p> <!-- Display temperature -->
+        <p>Condition: {{ condition }}</p> <!-- Display weather condition -->
+        <p>Wind Speed: {{ wind_kph }} km/h</p> <!-- Display wind speed -->
+        <p>Humidity: {{ humidity }}%</p> <!-- Display humidity -->
+    </div>
+</body>
+</html>

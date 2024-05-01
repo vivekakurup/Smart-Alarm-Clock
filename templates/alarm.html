@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alarm Data</title>
+    <style>
+        /* Styling for the body */
+
+        body {
+            font-family: Arial, sans-serif; /* Set font family */
+            background-color: #4B0082; /* Set background color to purple */
+            margin: 0; /* Remove margin */
+            padding: 0; /* Remove padding */
+            color: #fff; /* Set text color to white */
+        }
+        /* Styling for the container */
+        .container {
+            max-width: 800px; /* Set maximum width */
+            margin: 50px auto; /* Center the container */
+            padding: 20px; /* Add padding */
+            background-color: #f5e6fd; /* Set background color to light purple */
+            border-radius: 5px; /* Add border radius */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add box shadow */
+            position: relative; /* Make the container relative for absolute positioning */
+        }
+        /* Styling for the heading */
+        h1 {
+            text-align: center; /* Center align the text */
+            color: #f5f5f5
+        }
+        /* Styling for the table */
+        table {
+            width: 100%; /* Set table width to 100% */
+            border-collapse: collapse; /* Collapse table borders */
+            margin-top: 20px; /* Add margin at the top */
+            color: #4B0082; /* Set text color to purple */
+        }
+        /* Styling for table header and data cells */
+        th, td {
+            padding: 10px; /* Add padding */
+            text-align: left; /* Left align text */
+            border-bottom: 1px solid #ddd; /* Add bottom border */
+        }
+        /* Styling for table header cells */
+        th {
+            background-color: #f5f5f5; /* Set background color */
+        }
+        /* Styling for the stars */
+        .star {
+            position: absolute; /* Position the stars absolutely */
+            background-color: #e6ccff; /* Light purple color */
+            border-radius: 50%; /* Circle shape */
+            width: 10px; /* Width of the star */
+            height: 10px; /* Height of the star */
+        }
+    </style>
+</head>
+<body>
+    <div class="container"> <!-- Container for the table -->
+        <h1>Alarm Data</h1> <!-- Heading for the table -->
+        <table> <!-- Start of the table -->
+            <thead> <!-- Table header section -->
+                <tr> <!-- Table row for header -->
+                    <th>ID</th> <!-- Table header cell for ID -->
+                    <th>Alarm Time</th> <!-- Table header cell for Alarm Time -->
+                    <th>Alarm Date</th> <!-- Table header cell for Alarm Date -->
+                    <th>Repeat Days</th> <!-- Table header cell for Repeat Days -->
+                    <th>Enabled</th> <!-- Table header cell for Enabled -->
+                </tr>
+            </thead>
+            <tbody> <!-- Table body section -->
+                {% for alarm in alarm_data %} <!-- Loop through each alarm in alarm_data -->
+                    <tr> <!-- Table row for each alarm -->
+                        <td>{{ alarm.id }}</td> <!-- Table data cell for ID -->
+                        <td>{{ alarm.alarm_time }}</td> <!-- Table data cell for Alarm Time -->
+                        <td>{{ alarm.alarm_date }}</td> <!-- Table data cell for Alarm Date -->
+                        <td>{{ alarm.repeat_days }}</td> <!-- Table data cell for Repeat Days -->
+                        <td>{{ alarm.enabled }}</td> <!-- Table data cell for Enabled -->
+                    </tr>
+                {% endfor %} <!-- End of loop -->
+            </tbody>
+        </table> <!-- End of the table -->
+        <script>
+            var container = document.querySelector('.container'); // Select the container
+            for (var i = 0; i < 5; i++) {
+                var star = document.createElement('div'); // Create a new star element
+                star.classList.add('star'); // Add the 'star' class to the star element
+                star.style.left = Math.random() * container.clientWidth + 'px'; // Set a random left position
+                star.style.top = Math.random() * container.clientHeight + 'px'; // Set a random top position
+                container.appendChild(star); // Append the star element to the container
+            }
+        </script>
+    </div> <!-- End of the container -->
+</body>
+</html>
+
+
